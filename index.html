@@ -1,0 +1,86 @@
+<style>
+    #heading {
+        text-align: center;
+        font-family: cursive;
+        font-size: 35px;
+        color: pink;
+    }
+
+    .btns {
+        text-align: center;
+        margin-left: 10px;
+        font-family: cursive;
+    }
+
+
+    #yesBtn {
+        border-radius: 8px;
+        font-size: 30px;
+        font-family: cursive;
+    }
+
+
+    #noBtn {
+        border-radius: 4px;
+        font-size: 30px;
+        margin-left: 25px;
+        font-family: cursive;
+    }
+
+    #yesBtn:hover,
+    #noBtn:hover {
+        color: red;
+
+    }
+
+    #loveImg {
+        margin-left: 597px;
+        border-radius: 500px;
+    }
+</style>
+
+<body background="love-bg-2.jpg">
+
+
+    <hr>
+    <h1 id="heading">Do you love me?</h1>
+    <hr>
+
+    <img src="love.gif" id="loveImg">
+    <div class="btns">
+        <button id="yesBtn" onclick="changeMyFateAgain()">Yes</button>
+        <button id="noBtn" onclick="changeMyFate()">No</button>
+    </div>
+
+
+    <script>
+        function changeMyFate() {
+            let noBtn = document.getElementById("noBtn").innerHTML;
+            if (noBtn == "No") {
+                document.getElementById("noBtn").innerHTML = "Yes";
+                document.getElementById("yesBtn").innerHTML = "No"
+                document.getElementById("loveImg").src = "angry.webp";
+            } else {
+                document.getElementById("loveImg").src = "love.gif";
+                alert("Let's fucking go call me at +921446946456")
+            }
+
+
+
+
+
+        }
+
+        function changeMyFateAgain() {
+            let yesBtn = document.getElementById("yesBtn").innerHTML;
+            let noBtn = document.getElementById("noBtn").innerHTML
+            if (yesBtn == "No") {
+                document.getElementById("noBtn").innerHTML = "No";
+                document.getElementById("yesBtn").innerHTML = "Yes"
+            } else {
+                document.getElementById("loveImg").src = "love.gif";
+                alert("Let's fucking go call me at +921446946456")
+            }
+        }
+    </script>
+</body>
